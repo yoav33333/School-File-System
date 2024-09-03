@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jpackage" name="School_File_system:exe">
+    <output-path>$PROJECT_DIR$/out/artifacts/School_File_system_exe</output-path>
+    <root id="root">
+      <element id="module-output" name="School_File_system" />
+    </root>
+  </artifact>
+</component>
