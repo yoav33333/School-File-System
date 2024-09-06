@@ -27,7 +27,6 @@ public class widgets extends runFrame{
         add(createFileButton);
         add(fileName);
         add(currentSubject);
-
         CSubject.addItemListener(new ItemListener() {
             @Override
             public void itemStateChanged(ItemEvent e) {
@@ -36,6 +35,7 @@ public class widgets extends runFrame{
                 currentSubject.setText(subject.getItem());
             }
         });
+
 
         subject.addItemListener(new ItemListener() {
             @Override

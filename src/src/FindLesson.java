@@ -32,6 +32,7 @@ public class FindLesson extends Thread{
                 setSubject(Schedule.get(day).get(timeToLesson()));
 
             } catch (InterruptedException e) {
+
                 throw new RuntimeException(e);
             }
             System.out.println(new create_file.builder().getInstance().getSubject());
@@ -50,6 +51,8 @@ public class FindLesson extends Thread{
         list.add(Tuesday());
         list.add(Wendsday());
         list.add(Thursday());
+        list.add(Weekend());
+        list.add(Weekend());
         return list;
     }
 
@@ -62,6 +65,18 @@ public class FindLesson extends Thread{
         day.put(SchoolTime.lesson5, physics);
         day.put(SchoolTime.lesson6, physics);
         day.put(SchoolTime.lesson7, physics);
+        return day;
+    }
+
+    private HashMap<SchoolTime.Lesson, String> Weekend(){
+        HashMap<SchoolTime.Lesson, String> day = new HashMap<SchoolTime.Lesson, String>();
+        day.put(lesson1, null);
+        day.put(SchoolTime.lesson2, null);
+        day.put(lesson3, null);
+        day.put(SchoolTime.lesson4, null);
+        day.put(SchoolTime.lesson5, null);
+        day.put(SchoolTime.lesson6, null);
+        day.put(SchoolTime.lesson7, null);
         return day;
     }
 
@@ -155,7 +170,7 @@ public class FindLesson extends Thread{
             widgets.subject.setEnabled(false);
 
             new create_file.builder().getInstance().setSubject(subject);
-//            widgets.currentSubject.setText(new create_file.builder().getInstance().getSubject());
+            widgets.currentSubject.setText(new create_file.builder().getInstance().getSubject());
 
         }
         else {
