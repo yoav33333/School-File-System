@@ -35,7 +35,7 @@ public class create_file {
         }
         try {
             if (ending.equals(".xlsx")){
-                Path pathXL = Paths.get("\\src\\src\\baseXL.txt");
+                Path pathXL = Paths.get("baseXL.txt");
                 Files.write(Paths.get(path), Files.readAllBytes(pathXL));
                 System.out.println(Arrays.toString(Files.readAllBytes(pathXL)));
             }
